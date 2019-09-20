@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Puzzle Dungeon</title>
+</head>
+
+<script src="libs/pixi.min.js"></script> <!-- using v4.0 -->
+<script src="libs/jquery-3.2.1.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<body>
+
+    <div class="center-content">
+        <div class="inside-content">
+            <div class="game_title">Puzzle Dungeon</div>
+            <div class="game">
+                <div id="game_canvas"></div>
+                <div class="ui">
+
+                    <div class="level-display">
+                        <div>Level: <span id="level"></span></div>
+                        <div class="noselect">
+                            <button id="restart_level">RESTART LEVEL</button>
+                        </div>
+
+                    </div>
+                    <div class="controls">
+                        <div>Movement controls:</div>
+                        <div class="noselect">
+                            <div class="button_line">
+                                <i id="up" class="fa fa-2x fa-caret-up move_button"></i>
+                            </div>
+                            <div class="button_line">
+                                <i id="left" class="fa fa-2x fa-caret-left move_button"></i>
+                                <i class="fa fa-2x fa-circle"></i>
+                                <i id="right" class="fa fa-2x fa-caret-right move_button"></i>
+                            </div>
+                            <div class="button_line">
+                                <i id="down" class="fa fa-2x fa-caret-down move_button"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="description"></div>
+        </div>
+    </div>
+
+    <script src="js/ui.js"></script>
+    <script src="js/maps.js"></script>
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>
