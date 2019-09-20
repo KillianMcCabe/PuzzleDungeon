@@ -33,12 +33,17 @@ function setupControls() {
     ui = new Container();
     stage.addChild(ui);
 
-
     //Capture the keyboard arrow keys
     var left = keyboard(37),
         up = keyboard(38),
         right = keyboard(39),
         down = keyboard(40);
+
+    var r_key = keyboard(82);
+
+    r_key.release = function() {
+        restartLevel();
+    };
 
     //Up
     up.press = function() {
@@ -46,7 +51,7 @@ function setupControls() {
         $("#up").addClass('active');
     };
     up.release = function() {
-        $("#up").removeClass('active');    
+        $("#up").removeClass('active');
     };
     //Down
     down.press = function() {
@@ -54,7 +59,7 @@ function setupControls() {
         $("#down").addClass('active');
     };
     down.release = function() {
-        $("#down").removeClass('active');    
+        $("#down").removeClass('active');
     };
     //Left
     left.press = function() {
@@ -62,7 +67,7 @@ function setupControls() {
         $("#left").addClass('active');
     };
     left.release = function() {
-        $("#left").removeClass('active');    
+        $("#left").removeClass('active');
     };
     //Right
     right.press = function() {
@@ -70,7 +75,7 @@ function setupControls() {
         $("#right").addClass('active');
     };
     right.release = function() {
-        $("#right").removeClass('active');    
+        $("#right").removeClass('active');
     };
 
     //addPlayerUIArrows();
@@ -90,6 +95,7 @@ function setupControls() {
     });
 }
 
+//TODO: does this get used?
 function addPlayerUIArrows() {
     ui.position.set(renderer.width - (2* BLOCK_SIZE), renderer.height - (2* BLOCK_SIZE));
 

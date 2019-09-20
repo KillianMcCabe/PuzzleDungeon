@@ -18,6 +18,7 @@ button:active{
 	background: rgba(225, 225, 225, 0.75);
 }
 canvas {
+    touch-action: manipulation; /* disable double-tap to zoom */
     /*box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.5);*/
 }

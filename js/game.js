@@ -254,8 +254,7 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-function tryAgain() {
+function restartLevel() {
     gameScene.visible = true;
     gameOverScene.visible = false;
 
@@ -268,7 +267,7 @@ function die() {
     gameScene.visible = false;
     gameOverScene.visible = true;
 
-    setTimeout(tryAgain, 1000);
+    setTimeout(restartLevel, 1000);
 }
 
 function hideNote() {
@@ -413,7 +412,6 @@ function slide(obj) {
 
 }
 
-
 // window.onresize = function (event) {
 //     var w = window.innerWidth;
 //     var h = window.innerHeight;  
@@ -425,5 +423,5 @@ function slide(obj) {
 // }
 
 window.onload = function () {
-    $('#restart_level').click(tryAgain);
+    $('#restart_level').click(restartLevel);
 }
